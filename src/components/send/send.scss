@@ -1,0 +1,141 @@
+@import '../../style.scss';
+.send {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+
+    .header-send {
+
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid lightgray;
+        padding: 5px 0;
+        .userInfo {
+            display: flex;
+            align-items: center;
+            color: grey;
+            gap: 10px;
+            margin-left: 10px;
+            position: relative;
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            span {
+                font-size: 18px;
+                font-weight: bold;
+
+                @include mobile() {
+                    font-size: 15px;
+                }
+            }
+
+            .online {
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                background-color: rgb(30, 189, 51);
+                top: 0;
+                left: 40px;
+
+                @include mobile() {
+                    left: 25px;
+                }
+            }
+        }
+
+        .actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+    }
+
+    .content-send {
+        flex: 9;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow: scroll;
+        overflow-x: hidden;
+        padding: 10px 0;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item-container {
+
+            position: relative;
+            margin-bottom: 30px;
+            .item {
+                display: flex;
+                background-color: lightgrey;
+                align-items: center;
+                gap: 10px;
+                padding: 5px 10px;
+                width: max-content;
+                border-radius: 15px;
+                height: 40px;
+                position: absolute;
+                margin: 0 10px;
+                color: #fff;
+            
+                
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+    
+                p {
+                    margin: auto;
+                    align-items: center;
+                }
+        
+            }
+        }
+
+    }
+    .sendMess {
+
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-top: 10px;
+        background-color: rgb(203 186 186 / 20%);
+        padding: 0 5px;
+        flex: 1;
+        justify-content: space-between;
+        border-radius: 8px;
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            justify-content: space-around;
+            
+        }
+
+        input {
+            padding: 10px;
+            width: 90%;
+            border: 0.5px solid lightblue; 
+
+            @include mobile() {
+                width: 90%;
+            }
+            
+        }
+
+        button {
+            border: none;
+            padding: 10px;
+        }
+    }
+
+}
